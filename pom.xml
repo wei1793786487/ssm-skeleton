@@ -160,6 +160,21 @@
       <scope>compile</scope>
     </dependency>
 
+
+    <!--spring security-->
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-config</artifactId>
+      <version>5.1.6.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-taglibs</artifactId>
+      <version>5.1.6.RELEASE</version>
+    </dependency>
+
+
   </dependencies>
   <build>
     <finalName>ssm</finalName>

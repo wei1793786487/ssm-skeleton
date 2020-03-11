@@ -1,11 +1,10 @@
 package com.hqgml.ssm.controller;
 
-import com.hqgml.ssm.pojo.IUser;
-import com.hqgml.ssm.service.IuserService;
+import com.hqgml.ssm.pojo.SysUser;
+import com.hqgml.ssm.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -18,12 +17,12 @@ import java.util.List;
 public class iuseController  {
 
     @Autowired
-    private IuserService iuserService;
+    private SysUserService sysUserService;
 
 
     @RequestMapping("springmvc")
     public String teex(){
-        List<IUser> all = iuserService.findAll();
+        SysUser all = sysUserService.selectByPrimaryKey(1);
         System.out.println(all);
         System.out.println("表现层");
         return "list";
